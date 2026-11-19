@@ -20,7 +20,7 @@ Runs fully locally (Ollama). The LLM sits behind a provider-agnostic API layer, 
 | Correct, cited answers | 16 / 16 |
 | Unanswerable questions refused (including near-topic traps) | 6 / 6 |
 | Conflicting-document question: newer source used and conflict reported | ✅ |
-| Unit / API tests (no LLM needed) | 37 passing |
+| Unit / API tests (no LLM needed) | 38 passing |
 
 ## Features
 

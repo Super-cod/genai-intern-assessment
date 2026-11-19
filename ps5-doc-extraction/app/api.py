@@ -3,8 +3,10 @@ from __future__ import annotations
 
 import logging
 
+from pathlib import Path
+
 from fastapi import FastAPI, File, Query, Request, UploadFile
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
 
 from .config import get_settings
 from .doc_types import REGISTRY
@@ -47,6 +49,11 @@ async def extraction_error_handler(_: Request, exc: ExtractionError):
     return JSONResponse(status_code=exc.status_code,
                         content={"request_id": getattr(exc, "request_id", None), "error": exc.code,
                                  "message": exc.message})
+
+
+@app.get("/", include_in_schema=False)
+def ui():
+    return FileResponse(Path(__file__).parent / "static" / "index.html")
 
 
 @app.get("/health")

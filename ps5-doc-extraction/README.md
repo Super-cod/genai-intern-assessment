@@ -9,7 +9,7 @@ Runs fully locally (Ollama + RapidOCR). The LLM sits behind a provider-agnostic 
 | Architecture diagram + API | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) |
 | Technical decisions (answers to all 8 reasoning questions) | [docs/DECISIONS.md](docs/DECISIONS.md) |
 | Evaluation report | [docs/EVALUATION.md](docs/EVALUATION.md) |
-| API documentation | Swagger UI at `/docs`, OpenAPI at `/openapi.json` |
+| Web UI & API documentation | Interactive Web UI at `/`, Swagger UI at `/docs`, OpenAPI at `/openapi.json` |
 | Sample documents + structured outputs | [samples/](samples/) · [eval/results/](eval/results/) (one JSON output per invoice) |
 
 ## Results at a glance
@@ -22,7 +22,7 @@ Runs fully locally (Ollama + RapidOCR). The LLM sits behind a provider-agnostic 
 | Arithmetic errors in the document detected | ✅ (inv06) |
 | Scanned PDF via OCR | ✅ 13/14 fields (inv07) |
 | Invalid inputs rejected with the correct status code | 9/9 |
-| Unit / API tests (no LLM needed) | 53 passing |
+| Unit / API tests (no LLM needed) | 54 passing |
 
 ## How it works
 

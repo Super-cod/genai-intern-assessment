@@ -40,3 +40,10 @@ def test_missing_file_is_422(client):
 
 def test_document_types(client):
     assert "invoice" in client.get("/document-types").json()
+
+
+def test_ui_serves_html(client):
+    r = client.get("/")
+    assert r.status_code == 200
+    assert "text/html" in r.headers.get("content-type", "")
+    assert "Invoice Understanding" in r.text

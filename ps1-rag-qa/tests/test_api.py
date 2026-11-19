@@ -55,3 +55,10 @@ def test_query_returns_structured_answer(client):
 
 def test_delete_unknown_document_is_404(client):
     assert client.delete("/documents/nope").status_code == 404
+
+
+def test_ui_serves_html(client):
+    r = client.get("/")
+    assert r.status_code == 200
+    assert "text/html" in r.headers.get("content-type", "")
+    assert "Document Q&A" in r.text

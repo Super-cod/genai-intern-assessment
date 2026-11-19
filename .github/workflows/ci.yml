@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r ps1-rag-qa/requirements.txt -r ps5-doc-extraction/requirements.txt
+
+      - name: Test Problem 1 — Document RAG Q&A
+        run: |
+          pytest -v ps1-rag-qa/tests
+
+      - name: Test Problem 5 — Document Understanding & Extraction
+        run: |
+          pytest -v ps5-doc-extraction/tests

@@ -11,7 +11,31 @@ import re
 import threading
 from pathlib import Path
 
-import faiss
+try:
+    import faiss
+    _FAISS_AVAILABLE = True
+except Exception:
+    faiss = None
+    _FAISS_AVAILABLE = False
+
+
+class _NumpyIndexFlatIP:
+    """Exact inner-product search fallback when FAISS C++ DLL is unavailable."""
+    def __init__(self, d: int):
+        self.d = d
+        self._vecs: np.ndarray = np.zeros((0, d), dtype="float32")
+
+    def add(self, vecs: np.ndarray) -> None:
+        self._vecs = np.asarray(vecs, dtype="float32")
+
+    def search(self, q: np.ndarray, k: int) -> tuple[np.ndarray, np.ndarray]:
+        if self._vecs.shape[0] == 0:
+            return np.zeros((1, 0), dtype="float32"), np.zeros((1, 0), dtype="int64")
+        k = min(k, self._vecs.shape[0])
+        scores = np.dot(self._vecs, q.reshape(-1))
+        top_indices = np.argsort(-scores)[:k]
+        top_scores = scores[top_indices]
+        return top_scores.reshape(1, -1), top_indices.reshape(1, -1)
 import numpy as np
 from rank_bm25 import BM25Okapi
 
@@ -133,7 +157,10 @@ class ChunkIndex:
         if self.size == 0:
             self._faiss, self._bm25 = None, None
             return
-        self._faiss = faiss.IndexFlatIP(self.vectors.shape[1])
+        if _FAISS_AVAILABLE:
+            self._faiss = faiss.IndexFlatIP(self.vectors.shape[1])
+        else:
+            self._faiss = _NumpyIndexFlatIP(self.vectors.shape[1])
         self._faiss.add(self.vectors)
         self._bm25 = BM25Okapi([tokenize(c.embed_text) for c in self.chunks])
 
