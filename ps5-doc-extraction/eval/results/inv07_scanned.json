@@ -1,0 +1,237 @@
+{
+  "request_id": "f54f7945f4d8",
+  "filename": "inv07_scanned.pdf",
+  "document_type": "invoice",
+  "status": "partial",
+  "needs_review": true,
+  "data": {
+    "invoice_number": "GT-3381",
+    "invoice_date": "2024-05-14",
+    "due_date": null,
+    "vendor_name": "GreenThumb Gardening",
+    "vendor_address": "5 Willow Close,Bristol BS8 1TH",
+    "vendor_tax_id": null,
+    "customer_name": "Mrs Alice Morgan",
+    "customer_address": null,
+    "purchase_order": null,
+    "currency": null,
+    "subtotal": null,
+    "tax_amount": null,
+    "total_amount": "260.00",
+    "payment_terms": null,
+    "line_items": [
+      {
+        "description": "Lawn mowing service",
+        "quantity": "4",
+        "unit_price": "180.00",
+        "amount": "720.00"
+      },
+      {
+        "description": "Hedge trimming",
+        "quantity": "80",
+        "unit_price": null,
+        "amount": "80.00"
+      }
+    ]
+  },
+  "fields": {
+    "invoice_number": {
+      "value": "GT-3381",
+      "status": "extracted",
+      "raw_value": "GT-3381",
+      "evidence": "INVOICENO:GT-3381",
+      "page": 1,
+      "source": "ocr",
+      "confidence": 0.7,
+      "candidates": [],
+      "issues": []
+    },
+    "invoice_date": {
+      "value": "2024-05-14",
+      "status": "extracted",
+      "raw_value": "14 May 2024",
+      "evidence": "DATE: 14 May 2024",
+      "page": 1,
+      "source": "ocr",
+      "confidence": 0.7,
+      "candidates": [],
+      "issues": []
+    },
+    "due_date": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_name": {
+      "value": "GreenThumb Gardening",
+      "status": "extracted",
+      "raw_value": "GreenThumb Gardening",
+      "evidence": "GreenThumb Gardening\n5 Willow Close,Bristol BS8 1TH",
+      "page": 1,
+      "source": "ocr",
+      "confidence": 0.7,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_address": {
+      "value": "5 Willow Close,Bristol BS8 1TH",
+      "status": "extracted",
+      "raw_value": "5 Willow Close,Bristol BS8 1TH",
+      "evidence": "5 Willow Close,Bristol BS8 1TH",
+      "page": 1,
+      "source": "ocr",
+      "confidence": 0.7,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_tax_id": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_name": {
+      "value": "Mrs Alice Morgan",
+      "status": "extracted",
+      "raw_value": "Mrs Alice Morgan",
+      "evidence": "BILL TO: Mrs Alice Morgan",
+      "page": 1,
+      "source": "ocr",
+      "confidence": 0.7,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_address": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "purchase_order": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "currency": {
+      "value": null,
+      "status": "unverified",
+      "raw_value": "$",
+      "evidence": "Amount",
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": [
+        "value does not appear in the document text; discarded as a possible hallucination"
+      ]
+    },
+    "subtotal": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "tax_amount": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "total_amount": {
+      "value": 260.0,
+      "status": "extracted",
+      "raw_value": "260.00",
+      "evidence": "TOTAL:260.00",
+      "page": 1,
+      "source": "ocr",
+      "confidence": 0.7,
+      "candidates": [],
+      "issues": []
+    },
+    "payment_terms": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    }
+  },
+  "line_items": [
+    {
+      "description": "Lawn mowing service",
+      "quantity": 4.0,
+      "unit_price": 180.0,
+      "amount": 720.0
+    },
+    {
+      "description": "Hedge trimming",
+      "quantity": 80.0,
+      "unit_price": null,
+      "amount": 80.0
+    }
+  ],
+  "missing_fields": [
+    "due_date",
+    "vendor_tax_id",
+    "customer_address",
+    "purchase_order",
+    "subtotal",
+    "tax_amount",
+    "payment_terms"
+  ],
+  "ambiguous_fields": [],
+  "problem_fields": [
+    "currency"
+  ],
+  "validation_issues": [
+    "[warning] line items sum to 800.00, but total is 260.00"
+  ],
+  "warnings": [],
+  "pages": 1,
+  "text_sources": {
+    "ocr": 1
+  },
+  "model": "OllamaClient(qwen2.5:7b)",
+  "timings_ms": {
+    "text_extraction": 21548.1,
+    "llm_extraction": 59111.9,
+    "validation": 0.9,
+    "total": 80662.1
+  }
+}

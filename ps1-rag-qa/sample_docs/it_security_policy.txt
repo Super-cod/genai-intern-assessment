@@ -1,0 +1,17 @@
+Aster Robotics - IT Security Policy
+Last updated: June 1, 2024
+
+Passwords
+All accounts must use passwords of at least 14 characters. Passwords must be changed every 180 days and must not be reused within the last 10 passwords. Use of the company password manager is mandatory.
+
+Multi-Factor Authentication
+Multi-factor authentication (MFA) is required for email, VPN, the HR portal and all production systems. Hardware security keys are issued to engineers with production access.
+
+Devices
+Company laptops must have full-disk encryption enabled and must lock automatically after 5 minutes of inactivity. Personal devices may access email only through the managed mobile app.
+
+Reporting Incidents
+Suspected phishing emails must be reported using the "Report Phishing" button or by forwarding them to security@aster-robotics.example. Lost or stolen devices must be reported to the IT helpdesk within 24 hours.
+
+Data Classification
+Data is classified as Public, Internal, Confidential or Restricted. Restricted data, such as customer contracts and employee records, must never be stored on personal devices or shared through personal email.

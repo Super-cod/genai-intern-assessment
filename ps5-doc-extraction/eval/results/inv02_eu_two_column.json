@@ -1,0 +1,225 @@
+{
+  "request_id": "44ffcd18f1d0",
+  "filename": "inv02_eu_two_column.pdf",
+  "document_type": "invoice",
+  "status": "complete",
+  "needs_review": false,
+  "data": {
+    "invoice_number": "2024/118",
+    "invoice_date": "2024-02-12",
+    "due_date": "2024-03-13",
+    "vendor_name": "Kessler Maschinenbau GmbH",
+    "vendor_address": "Industriestrasse 14, 70565 Stuttgart, Germany",
+    "vendor_tax_id": "DE123456789",
+    "customer_name": "Van Dijk Logistics B.V.",
+    "customer_address": "Havenweg 3, 3011 Rotterdam, Netherlands",
+    "purchase_order": null,
+    "currency": "EUR",
+    "subtotal": "2450.00",
+    "tax_amount": "465.50",
+    "total_amount": "2915.50",
+    "payment_terms": "payable within 30 days without deduction.",
+    "line_items": [
+      {
+        "description": "CNC spindle maintenance",
+        "quantity": "1",
+        "unit_price": "1450.00",
+        "amount": "1450.00"
+      },
+      {
+        "description": "Replacement bearings set",
+        "quantity": "4",
+        "unit_price": "250.00",
+        "amount": "1000.00"
+      }
+    ]
+  },
+  "fields": {
+    "invoice_number": {
+      "value": "2024/118",
+      "status": "extracted",
+      "raw_value": "2024/118",
+      "evidence": "Invoice no.: 2024/118",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "invoice_date": {
+      "value": "2024-02-12",
+      "status": "extracted",
+      "raw_value": "12.02.2024",
+      "evidence": "Date: 12.02.2024",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "due_date": {
+      "value": "2024-03-13",
+      "status": "extracted",
+      "raw_value": "13.03.2024",
+      "evidence": "Due: 13.03.2024",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_name": {
+      "value": "Kessler Maschinenbau GmbH",
+      "status": "extracted",
+      "raw_value": "Kessler Maschinenbau GmbH",
+      "evidence": "Kessler Maschinenbau GmbH",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_address": {
+      "value": "Industriestrasse 14, 70565 Stuttgart, Germany",
+      "status": "extracted",
+      "raw_value": "Industriestrasse 14, 70565 Stuttgart, Germany",
+      "evidence": "Industriestrasse 14, 70565 Stuttgart, Germany",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_tax_id": {
+      "value": "DE123456789",
+      "status": "extracted",
+      "raw_value": "DE123456789",
+      "evidence": "VAT ID: DE123456789",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_name": {
+      "value": "Van Dijk Logistics B.V.",
+      "status": "extracted",
+      "raw_value": "Van Dijk Logistics B.V.",
+      "evidence": "Van Dijk Logistics B.V.",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_address": {
+      "value": "Havenweg 3, 3011 Rotterdam, Netherlands",
+      "status": "extracted",
+      "raw_value": "Havenweg 3, 3011 Rotterdam, Netherlands",
+      "evidence": "Havenweg 3\n3011 Rotterdam, Netherlands",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.8,
+      "candidates": [],
+      "issues": []
+    },
+    "purchase_order": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "currency": {
+      "value": "EUR",
+      "status": "extracted",
+      "raw_value": "EUR",
+      "evidence": "Price (EUR)           Total (EUR)",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "subtotal": {
+      "value": 2450.0,
+      "status": "extracted",
+      "raw_value": "2.450,00 EUR",
+      "evidence": "Net amount: 2.450,00 EUR",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "tax_amount": {
+      "value": 465.5,
+      "status": "extracted",
+      "raw_value": "465,50 EUR",
+      "evidence": "VAT 19%: 465,50 EUR",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "total_amount": {
+      "value": 2915.5,
+      "status": "extracted",
+      "raw_value": "2.915,50 EUR",
+      "evidence": "Gross total: 2.915,50 EUR",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "payment_terms": {
+      "value": "payable within 30 days without deduction.",
+      "status": "extracted",
+      "raw_value": "payable within 30 days without deduction.",
+      "evidence": "Terms: payable within 30 days without deduction.",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    }
+  },
+  "line_items": [
+    {
+      "description": "CNC spindle maintenance",
+      "quantity": 1.0,
+      "unit_price": 1450.0,
+      "amount": 1450.0
+    },
+    {
+      "description": "Replacement bearings set",
+      "quantity": 4.0,
+      "unit_price": 250.0,
+      "amount": 1000.0
+    }
+  ],
+  "missing_fields": [
+    "purchase_order"
+  ],
+  "ambiguous_fields": [],
+  "problem_fields": [],
+  "validation_issues": [],
+  "warnings": [],
+  "pages": 1,
+  "text_sources": {
+    "text": 1
+  },
+  "model": "OllamaClient(qwen2.5:7b)",
+  "timings_ms": {
+    "text_extraction": 15.8,
+    "llm_extraction": 87319.0,
+    "validation": 22.4,
+    "total": 87358.8
+  }
+}

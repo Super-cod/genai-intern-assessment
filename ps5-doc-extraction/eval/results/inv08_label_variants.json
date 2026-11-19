@@ -1,0 +1,230 @@
+{
+  "request_id": "97db0a8e6401",
+  "filename": "inv08_label_variants.pdf",
+  "document_type": "invoice",
+  "status": "complete",
+  "needs_review": true,
+  "data": {
+    "invoice_number": "NDS/24/0457",
+    "invoice_date": "2024-09-02",
+    "due_date": "2024-10-02",
+    "vendor_name": "Nimbus Data Services Pte. Ltd.",
+    "vendor_address": null,
+    "vendor_tax_id": "201912345K",
+    "customer_name": "Coral Reef Travel Pte. Ltd.",
+    "customer_address": null,
+    "purchase_order": "CR-PO-2024-88",
+    "currency": "SGD",
+    "subtotal": "288.88",
+    "tax_amount": "14.44",
+    "total_amount": "303.32",
+    "payment_terms": "Pay by: 2 October 2024",
+    "line_items": [
+      {
+        "description": "Cloud backup - 2 TB plan",
+        "quantity": null,
+        "unit_price": "19.99",
+        "amount": "239.88"
+      },
+      {
+        "description": "Setup fee",
+        "quantity": "1",
+        "unit_price": "49.00",
+        "amount": "49.00"
+      }
+    ]
+  },
+  "fields": {
+    "invoice_number": {
+      "value": "NDS/24/0457",
+      "status": "extracted",
+      "raw_value": "NDS/24/0457",
+      "evidence": "Bill No. NDS/24/0457",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "invoice_date": {
+      "value": "2024-09-02",
+      "status": "extracted",
+      "raw_value": "2 September 2024",
+      "evidence": "Issued on: 2 September 2024",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "due_date": {
+      "value": "2024-10-02",
+      "status": "extracted",
+      "raw_value": "2 October 2024",
+      "evidence": "Pay by: 2 October 2024",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_name": {
+      "value": "Nimbus Data Services Pte. Ltd.",
+      "status": "extracted",
+      "raw_value": "Nimbus Data Services Pte. Ltd.",
+      "evidence": "Nimbus Data Services Pte. Ltd.",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_address": {
+      "value": null,
+      "status": "unverified",
+      "raw_value": "10 Anson Road #22-01 Singapore 079903",
+      "evidence": "10 Anson Road #22-01 Singapore 079903",
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": [
+        "value does not appear in the document text; discarded as a possible hallucination"
+      ]
+    },
+    "vendor_tax_id": {
+      "value": "201912345K",
+      "status": "extracted",
+      "raw_value": "201912345K",
+      "evidence": "GST Reg: 201912345K",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_name": {
+      "value": "Coral Reef Travel Pte. Ltd.",
+      "status": "extracted",
+      "raw_value": "Coral Reef Travel Pte. Ltd.",
+      "evidence": "Coral Reef Travel Pte. Ltd.",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_address": {
+      "value": null,
+      "status": "unverified",
+      "raw_value": "2 Orchard Turn Singapore 238801",
+      "evidence": "2 Orchard Turn Singapore 238801",
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": [
+        "value does not appear in the document text; discarded as a possible hallucination"
+      ]
+    },
+    "purchase_order": {
+      "value": "CR-PO-2024-88",
+      "status": "extracted",
+      "raw_value": "CR-PO-2024-88",
+      "evidence": "Your reference: CR-PO-2024-88",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "currency": {
+      "value": "SGD",
+      "status": "extracted",
+      "raw_value": "SGD",
+      "evidence": "Value SGD",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "subtotal": {
+      "value": 288.88,
+      "status": "extracted",
+      "raw_value": "288.88",
+      "evidence": "Taxable value: SGD 288.88",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "tax_amount": {
+      "value": 14.44,
+      "status": "extracted",
+      "raw_value": "14.44",
+      "evidence": "GST 5%: SGD 14.44",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "total_amount": {
+      "value": 303.32,
+      "status": "extracted",
+      "raw_value": "303.32",
+      "evidence": "Amount payable: SGD 303.32",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "payment_terms": {
+      "value": "Pay by: 2 October 2024",
+      "status": "extracted",
+      "raw_value": "Pay by: 2 October 2024",
+      "evidence": "Pay by: 2 October 2024",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    }
+  },
+  "line_items": [
+    {
+      "description": "Cloud backup - 2 TB plan",
+      "quantity": null,
+      "unit_price": 19.99,
+      "amount": 239.88
+    },
+    {
+      "description": "Setup fee",
+      "quantity": 1.0,
+      "unit_price": 49.0,
+      "amount": 49.0
+    }
+  ],
+  "missing_fields": [],
+  "ambiguous_fields": [],
+  "problem_fields": [
+    "vendor_address",
+    "customer_address"
+  ],
+  "validation_issues": [],
+  "warnings": [],
+  "pages": 1,
+  "text_sources": {
+    "text": 1
+  },
+  "model": "OllamaClient(qwen2.5:7b)",
+  "timings_ms": {
+    "text_extraction": 17.6,
+    "llm_extraction": 95215.4,
+    "validation": 77.3,
+    "total": 95311.3
+  }
+}

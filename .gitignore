@@ -1,0 +1,27 @@
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Environment variables
+.env
+.env.local
+
+# Project data and artifacts
+ps1-rag-qa/data/
+ps1-rag-qa/data_*/
+ps5-doc-extraction/logs/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

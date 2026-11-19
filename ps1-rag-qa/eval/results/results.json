@@ -1,0 +1,590 @@
+{
+  "retrieval": {
+    "dense": {
+      "hit@1": 0.938,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.969,
+      "misses": [
+        {
+          "id": "Q01",
+          "type": "conflict",
+          "rank": 2,
+          "top1": "employee_handbook_2024.pdf | 2. Annual Leave"
+        }
+      ]
+    },
+    "bm25": {
+      "hit@1": 0.812,
+      "hit@3": 0.875,
+      "hit@5": 0.938,
+      "mrr": 0.859,
+      "misses": [
+        {
+          "id": "Q03",
+          "type": "factual",
+          "rank": 4,
+          "top1": "customer_support_faq.txt | What warranty does the RX-200 have?"
+        },
+        {
+          "id": "Q05",
+          "type": "factual",
+          "rank": 2,
+          "top1": "customer_support_faq.txt | What warranty does the RX-200 have?"
+        },
+        {
+          "id": "Q13",
+          "type": "typo",
+          "rank": null,
+          "top1": null
+        }
+      ]
+    },
+    "hybrid": {
+      "hit@1": 0.938,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.969,
+      "misses": [
+        {
+          "id": "Q01",
+          "type": "conflict",
+          "rank": 2,
+          "top1": "employee_handbook_2024.pdf | 2. Annual Leave"
+        }
+      ]
+    }
+  },
+  "gate": [
+    {
+      "id": "Q01",
+      "expect": "answer",
+      "best_dense": 0.608,
+      "gated_out": false
+    },
+    {
+      "id": "Q02",
+      "expect": "answer",
+      "best_dense": 0.652,
+      "gated_out": false
+    },
+    {
+      "id": "Q03",
+      "expect": "answer",
+      "best_dense": 0.701,
+      "gated_out": false
+    },
+    {
+      "id": "Q04",
+      "expect": "answer",
+      "best_dense": 0.526,
+      "gated_out": false
+    },
+    {
+      "id": "Q05",
+      "expect": "answer",
+      "best_dense": 0.645,
+      "gated_out": false
+    },
+    {
+      "id": "Q06",
+      "expect": "answer",
+      "best_dense": 0.572,
+      "gated_out": false
+    },
+    {
+      "id": "Q07",
+      "expect": "answer",
+      "best_dense": 0.622,
+      "gated_out": false
+    },
+    {
+      "id": "Q08",
+      "expect": "answer",
+      "best_dense": 0.667,
+      "gated_out": false
+    },
+    {
+      "id": "Q09",
+      "expect": "answer",
+      "best_dense": 0.566,
+      "gated_out": false
+    },
+    {
+      "id": "Q10",
+      "expect": "answer",
+      "best_dense": 0.75,
+      "gated_out": false
+    },
+    {
+      "id": "Q11",
+      "expect": "answer",
+      "best_dense": 0.548,
+      "gated_out": false
+    },
+    {
+      "id": "Q12",
+      "expect": "answer",
+      "best_dense": 0.58,
+      "gated_out": false
+    },
+    {
+      "id": "Q13",
+      "expect": "answer",
+      "best_dense": 0.576,
+      "gated_out": false
+    },
+    {
+      "id": "Q14",
+      "expect": "answer",
+      "best_dense": 0.653,
+      "gated_out": false
+    },
+    {
+      "id": "Q15",
+      "expect": "answer",
+      "best_dense": 0.42,
+      "gated_out": false
+    },
+    {
+      "id": "Q16",
+      "expect": "answer",
+      "best_dense": 0.764,
+      "gated_out": false
+    },
+    {
+      "id": "U01",
+      "expect": "refuse",
+      "best_dense": 0.232,
+      "gated_out": true
+    },
+    {
+      "id": "U02",
+      "expect": "refuse",
+      "best_dense": 0.47,
+      "gated_out": false
+    },
+    {
+      "id": "U03",
+      "expect": "refuse",
+      "best_dense": 0.1,
+      "gated_out": true
+    },
+    {
+      "id": "U04",
+      "expect": "refuse",
+      "best_dense": 0.424,
+      "gated_out": false
+    },
+    {
+      "id": "U05",
+      "expect": "refuse",
+      "best_dense": 0.655,
+      "gated_out": false
+    },
+    {
+      "id": "U06",
+      "expect": "refuse_or_qualified",
+      "best_dense": 0.514,
+      "gated_out": false
+    }
+  ],
+  "e2e": [
+    {
+      "id": "Q01",
+      "type": "conflict",
+      "question": "How many days of annual leave do full-time employees get?",
+      "standalone_question": "How many days of annual leave do full-time employees get?",
+      "status": "answered",
+      "answer": "Full-time employees are entitled to 24 days of paid annual leave per calendar year, as of January 1, 2025 [S1].",
+      "citations": [
+        "S1:leave_policy_update_2025.txt"
+      ],
+      "grounding": 1.0,
+      "conflict_note": "Sources disagree: leave_policy_update_2025.txt (effective 2025-01-01) [S1] differs from older employee_handbook_2024.pdf (effective 2024-01-01) [S3]. The newer document takes precedence.",
+      "latency_s": 11.1,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true,
+      "conflict_note_ok": true
+    },
+    {
+      "id": "Q02",
+      "type": "conflict",
+      "question": "Can unused annual leave be carried over to next year?",
+      "standalone_question": "Can unused annual leave be carried over to next year?",
+      "status": "answered",
+      "answer": "Yes, unused annual leave can be carried over to the next year, up to a maximum of 5 days.",
+      "citations": [
+        "S1:leave_policy_update_2025.txt"
+      ],
+      "grounding": 0.8,
+      "conflict_note": "Sources disagree: leave_policy_update_2025.txt (effective 2025-01-01) [S1] differs from older employee_handbook_2024.pdf (effective 2024-01-01). The newer document takes precedence.",
+      "latency_s": 17.5,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "Q03",
+      "type": "factual",
+      "question": "What is the battery runtime of the RX-200?",
+      "standalone_question": "What is the battery runtime of the RX-200?",
+      "status": "answered",
+      "answer": "The typical runtime of the RX-200's battery is 8 hours at 50 percent average payload.",
+      "citations": [
+        "S1:rx200_product_manual.pdf"
+      ],
+      "grounding": 1.0,
+      "conflict_note": null,
+      "latency_s": 9.4,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "Q04",
+      "type": "factual",
+      "question": "What does error code E204 mean?",
+      "standalone_question": "What does error code E204 mean?",
+      "status": "answered",
+      "answer": "Error code E204 indicates that the battery temperature exceeded 55 degrees Celsius, causing the robot to stop and return to the dock. Allow it to cool for 30 minutes; if the error recurs, contact support.",
+      "citations": [
+        "S1:rx200_product_manual.pdf"
+      ],
+      "grounding": 0.714,
+      "conflict_note": null,
+      "latency_s": 13.0,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "Q05",
+      "type": "factual",
+      "question": "What is the maximum payload of the RX-200?",
+      "standalone_question": "What is the maximum payload of the RX-200?",
+      "status": "answered",
+      "answer": "The maximum payload of the RX-200 is 150 kg.",
+      "citations": [
+        "S1:rx200_product_manual.pdf"
+      ],
+      "grounding": 1.0,
+      "conflict_note": null,
+      "latency_s": 7.5,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "Q06",
+      "type": "factual",
+      "question": "What is the minimum password length?",
+      "standalone_question": "What is the minimum password length?",
+      "status": "answered",
+      "answer": "The minimum password length is 14 characters.",
+      "citations": [
+        "S1:it_security_policy.txt"
+      ],
+      "grounding": 1.0,
+      "conflict_note": null,
+      "latency_s": 6.9,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "Q07",
+      "type": "factual",
+      "question": "How often do passwords need to be changed?",
+      "standalone_question": "How often do passwords need to be changed?",
+      "status": "answered",
+      "answer": "Passwords need to be changed every 180 days.",
+      "citations": [
+        "S1:it_security_policy.txt"
+      ],
+      "grounding": 1.0,
+      "conflict_note": null,
+      "latency_s": 7.8,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "Q08",
+      "type": "factual",
+      "question": "What is the nightly hotel limit for domestic business trips?",
+      "standalone_question": "What is the nightly hotel limit for domestic business trips?",
+      "status": "answered",
+      "answer": "The nightly hotel limit for domestic business trips is 180 USD.",
+      "citations": [
+        "S1:travel_policy.pdf"
+      ],
+      "grounding": 1.0,
+      "conflict_note": null,
+      "latency_s": 7.8,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "Q09",
+      "type": "factual",
+      "question": "How long do I have to submit an expense claim?",
+      "standalone_question": "How long do I have to submit an expense claim?",
+      "status": "answered",
+      "answer": "You have 30 days from the expense date to submit an expense claim.",
+      "citations": [
+        "S1:employee_handbook_2024.pdf"
+      ],
+      "grounding": 1.0,
+      "conflict_note": null,
+      "latency_s": 7.8,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "Q10",
+      "type": "duplicate",
+      "question": "How long is the RX-200 warranty?",
+      "standalone_question": "How long is the RX-200 warranty?",
+      "status": "answered",
+      "answer": "The RX-200 is covered by a limited warranty of 2 years from the date of delivery.",
+      "citations": [
+        "S1:customer_support_faq.txt"
+      ],
+      "grounding": 1.0,
+      "conflict_note": null,
+      "latency_s": 9.4,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "Q11",
+      "type": "factual",
+      "question": "How many days a week can I work from home?",
+      "standalone_question": "How many days a week can I work from home?",
+      "status": "answered",
+      "answer": "You can work remotely up to 2 days per week with manager approval.",
+      "citations": [
+        "S1:employee_handbook_2024.pdf"
+      ],
+      "grounding": 1.0,
+      "conflict_note": null,
+      "latency_s": 7.6,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "Q12",
+      "type": "factual",
+      "question": "Where should I report a phishing email?",
+      "standalone_question": "Where should I report a phishing email?",
+      "status": "answered",
+      "answer": "Suspected phishing emails should be reported using the 'Report Phishing' button or by forwarding them to security@aster-robotics.example.",
+      "citations": [
+        "S1:it_security_policy.txt"
+      ],
+      "grounding": 1.0,
+      "conflict_note": null,
+      "latency_s": 9.4,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "Q13",
+      "type": "typo",
+      "question": "pasword lenght requirment",
+      "standalone_question": "pasword lenght requirment",
+      "status": "answered",
+      "answer": "All accounts must use passwords of at least 14 characters.",
+      "citations": [
+        "S1:it_security_policy.txt"
+      ],
+      "grounding": 1.0,
+      "conflict_note": null,
+      "latency_s": 7.1,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "Q14",
+      "type": "factual",
+      "question": "What is the per diem for international travel?",
+      "standalone_question": "What is the per diem for international travel?",
+      "status": "answered",
+      "answer": "The daily meal allowance (per diem) for international trips is 85 USD.",
+      "citations": [
+        "S1:travel_policy.pdf"
+      ],
+      "grounding": 1.0,
+      "conflict_note": null,
+      "latency_s": 7.2,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "Q15",
+      "type": "followup",
+      "question": "How long does it take to charge it?",
+      "standalone_question": "How long does it take to charge the RX-200's battery?",
+      "status": "answered",
+      "answer": "It takes 1.5 hours to fully charge the RX-200's battery using the fast dock, and 2.5 hours on the standard dock.",
+      "citations": [
+        "S1:rx200_product_manual.pdf"
+      ],
+      "grounding": 0.818,
+      "conflict_note": null,
+      "latency_s": 14.2,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "Q16",
+      "type": "factual",
+      "question": "How many robots can a single fleet manager control?",
+      "standalone_question": "How many robots can a single fleet manager control?",
+      "status": "answered",
+      "answer": "A single fleet manager instance supports up to 50 RX-200 robots.",
+      "citations": [
+        "S1:customer_support_faq.txt"
+      ],
+      "grounding": 1.0,
+      "conflict_note": null,
+      "latency_s": 7.2,
+      "status_ok": true,
+      "answer_ok": true,
+      "citation_ok": true
+    },
+    {
+      "id": "U01",
+      "type": "unanswerable",
+      "question": "What is the CEO's salary?",
+      "standalone_question": "What is the CEO's salary?",
+      "status": "not_found",
+      "answer": "I could not find information about this in the uploaded documents, so I can't answer it without guessing.",
+      "citations": [],
+      "grounding": null,
+      "conflict_note": null,
+      "latency_s": 0.3,
+      "status_ok": true,
+      "answer_ok": true
+    },
+    {
+      "id": "U02",
+      "type": "unanswerable",
+      "question": "What is Aster Robotics' current stock price?",
+      "standalone_question": "What is Aster Robotics' current stock price?",
+      "status": "insufficient_context",
+      "answer": "I could not find information about this in the uploaded documents, so I can't answer it without guessing.",
+      "citations": [],
+      "grounding": null,
+      "conflict_note": "Sources disagree: leave_policy_update_2025.txt (effective 2025-01-01) [S2] differs from older employee_handbook_2024.pdf (effective 2024-01-01) [S3]. The newer document takes precedence.",
+      "latency_s": 4.4,
+      "status_ok": true,
+      "answer_ok": true
+    },
+    {
+      "id": "U03",
+      "type": "unanswerable",
+      "question": "What is the capital of France?",
+      "standalone_question": "What is the capital of France?",
+      "status": "not_found",
+      "answer": "I could not find information about this in the uploaded documents, so I can't answer it without guessing.",
+      "citations": [],
+      "grounding": null,
+      "conflict_note": null,
+      "latency_s": 0.3,
+      "status_ok": true,
+      "answer_ok": true
+    },
+    {
+      "id": "U04",
+      "type": "near_topic",
+      "question": "What is the parental leave policy?",
+      "standalone_question": "What is the parental leave policy?",
+      "status": "insufficient_context",
+      "answer": "I could not find information about this in the uploaded documents, so I can't answer it without guessing.",
+      "citations": [],
+      "grounding": null,
+      "conflict_note": "Sources disagree: leave_policy_update_2025.txt (effective 2025-01-01) [S2] differs from older employee_handbook_2024.pdf (effective 2024-01-01) [S5]; leave_policy_update_2025.txt (effective 2025-01-01) [S4] differs from older employee_handbook_2024.pdf (effective 2024-01-01) [S5]. The newer document takes precedence.",
+      "latency_s": 4.7,
+      "status_ok": true,
+      "answer_ok": true
+    },
+    {
+      "id": "U05",
+      "type": "near_topic",
+      "question": "How long is the warranty on the RX-300?",
+      "standalone_question": "How long is the warranty on the RX-300?",
+      "status": "insufficient_context",
+      "answer": "I could not find information about this in the uploaded documents, so I can't answer it without guessing.",
+      "citations": [],
+      "grounding": null,
+      "conflict_note": null,
+      "latency_s": 4.4,
+      "status_ok": true,
+      "answer_ok": true
+    },
+    {
+      "id": "U06",
+      "type": "near_topic",
+      "question": "Can the RX-200 operate underwater?",
+      "standalone_question": "Can the RX-200 operate underwater?",
+      "status": "insufficient_context",
+      "answer": "I could not find information about this in the uploaded documents, so I can't answer it without guessing.",
+      "citations": [],
+      "grounding": null,
+      "conflict_note": null,
+      "latency_s": 4.7,
+      "status_ok": true,
+      "answer_ok": true
+    }
+  ],
+  "edge_cases": [
+    {
+      "file": "corrupted.pdf",
+      "accepted": true,
+      "chunks": 1,
+      "warnings": [
+        "PDF structure was damaged and has been repaired; some content may be missing",
+        "1 chunk(s) were exact duplicates of already-indexed text"
+      ]
+    },
+    {
+      "file": "empty.txt",
+      "accepted": false,
+      "error": "no_extractable_text",
+      "http": 422,
+      "message": "'empty.txt' is empty (0 bytes)"
+    },
+    {
+      "file": "not_really_a_pdf.pdf",
+      "accepted": false,
+      "error": "corrupt_document",
+      "http": 422,
+      "message": "'not_really_a_pdf.pdf' has a .pdf extension but is not a valid PDF"
+    },
+    {
+      "file": "scanned_memo.pdf",
+      "accepted": false,
+      "error": "no_extractable_text",
+      "http": 422,
+      "message": "'scanned_memo.pdf' contains no extractable text (likely a scanned/image-only PDF; OCR is out of scope for this service - see the extraction service in ps5 for OCR)"
+    },
+    {
+      "file": "spreadsheet.xlsx",
+      "accepted": false,
+      "error": "unsupported_file_type",
+      "http": 415,
+      "message": "'spreadsheet.xlsx': only PDF and TXT are supported (got '.xlsx')"
+    }
+  ]
+}

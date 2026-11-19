@@ -1,0 +1,12 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+httpx>=0.27
+pydantic>=2.7
+pydantic-settings>=2.3
+pymupdf>=1.24
+numpy>=1.26
+rapidocr-onnxruntime>=1.3     # OCR for scanned pages (pure pip, no system Tesseract)
+pytest>=8
+# optional: hosted Claude backend (LLM_PROVIDER=anthropic)
+# anthropic

@@ -1,0 +1,217 @@
+{
+  "request_id": "0453d66a9a79",
+  "filename": "inv09_terms_no_due_date.pdf",
+  "document_type": "invoice",
+  "status": "complete",
+  "needs_review": true,
+  "data": {
+    "invoice_number": "LC-2024-077",
+    "invoice_date": "2024-07-01",
+    "due_date": null,
+    "vendor_name": "Ledger & Co Bookkeeping",
+    "vendor_address": "9 Mill Street, Manchester M1 2HF",
+    "vendor_tax_id": "GB 123 4567 89",
+    "customer_name": "Bloom Florists Ltd",
+    "customer_address": "41 Deansgate, Manchester M3 2BW",
+    "purchase_order": null,
+    "currency": "GBP",
+    "subtotal": "1200.00",
+    "tax_amount": "240.00",
+    "total_amount": "1440.00",
+    "payment_terms": "30 days of the invoice date.",
+    "line_items": [
+      {
+        "description": "Bookkeeping - Q2 2024",
+        "quantity": "1",
+        "unit_price": "1200.00",
+        "amount": "1200.00"
+      }
+    ]
+  },
+  "fields": {
+    "invoice_number": {
+      "value": "LC-2024-077",
+      "status": "extracted",
+      "raw_value": "LC-2024-077",
+      "evidence": "Invoice reference: LC-2024-077",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "invoice_date": {
+      "value": "2024-07-01",
+      "status": "extracted",
+      "raw_value": "1 July 2024",
+      "evidence": "Invoice date: 1 July 2024",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "due_date": {
+      "value": null,
+      "status": "unverified",
+      "raw_value": "31 July 2024",
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": [
+        "value does not appear in the document text; discarded as a possible hallucination"
+      ]
+    },
+    "vendor_name": {
+      "value": "Ledger & Co Bookkeeping",
+      "status": "extracted",
+      "raw_value": "Ledger & Co Bookkeeping",
+      "evidence": "Ledger & Co Bookkeeping\n9 Mill Street, Manchester M1 2HF",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_address": {
+      "value": "9 Mill Street, Manchester M1 2HF",
+      "status": "extracted",
+      "raw_value": "9 Mill Street, Manchester M1 2HF",
+      "evidence": "9 Mill Street, Manchester M1 2HF",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_tax_id": {
+      "value": "GB 123 4567 89",
+      "status": "extracted",
+      "raw_value": "GB 123 4567 89",
+      "evidence": "VAT No. GB 123 4567 89",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_name": {
+      "value": "Bloom Florists Ltd",
+      "status": "extracted",
+      "raw_value": "Bloom Florists Ltd",
+      "evidence": "To: Bloom Florists Ltd, 41 Deansgate, Manchester M3 2BW",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_address": {
+      "value": "41 Deansgate, Manchester M3 2BW",
+      "status": "extracted",
+      "raw_value": "41 Deansgate, Manchester M3 2BW",
+      "evidence": "41 Deansgate, Manchester M3 2BW",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "purchase_order": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "currency": {
+      "value": "GBP",
+      "status": "extracted",
+      "raw_value": "GBP",
+      "evidence": "Net: GBP 1,200.00\nVAT 20%: GBP 240.00\nTotal: GBP 1,440.00",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "subtotal": {
+      "value": 1200.0,
+      "status": "extracted",
+      "raw_value": "1,200.00",
+      "evidence": "Amount\n1,200.00",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "tax_amount": {
+      "value": 240.0,
+      "status": "extracted",
+      "raw_value": "240.00",
+      "evidence": "VAT 20%: GBP 240.00",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "total_amount": {
+      "value": 1440.0,
+      "status": "extracted",
+      "raw_value": "1,440.00",
+      "evidence": "Total: GBP 1,440.00",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "payment_terms": {
+      "value": "30 days of the invoice date.",
+      "status": "extracted",
+      "raw_value": "30 days of the invoice date.",
+      "evidence": "Payment due within 30 days of the invoice date.",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    }
+  },
+  "line_items": [
+    {
+      "description": "Bookkeeping - Q2 2024",
+      "quantity": 1.0,
+      "unit_price": 1200.0,
+      "amount": 1200.0
+    }
+  ],
+  "missing_fields": [
+    "purchase_order"
+  ],
+  "ambiguous_fields": [],
+  "problem_fields": [
+    "due_date"
+  ],
+  "validation_issues": [],
+  "warnings": [],
+  "pages": 1,
+  "text_sources": {
+    "text": 1
+  },
+  "model": "OllamaClient(qwen2.5:7b)",
+  "timings_ms": {
+    "text_extraction": 14.5,
+    "llm_extraction": 87517.7,
+    "validation": 16.0,
+    "total": 87549.2
+  }
+}

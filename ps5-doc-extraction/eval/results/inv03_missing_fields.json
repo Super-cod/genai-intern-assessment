@@ -1,0 +1,240 @@
+{
+  "request_id": "99da7765874c",
+  "filename": "inv03_missing_fields.pdf",
+  "document_type": "invoice",
+  "status": "partial",
+  "needs_review": true,
+  "data": {
+    "invoice_number": "PF-0931",
+    "invoice_date": "2024-06-18",
+    "due_date": null,
+    "vendor_name": "Pixelforge Studio",
+    "vendor_address": "88 Harbor Lane, Portland, OR 97201",
+    "vendor_tax_id": null,
+    "customer_name": "Greenleaf Bakery",
+    "customer_address": null,
+    "purchase_order": null,
+    "currency": "USD",
+    "subtotal": "240.00",
+    "tax_amount": null,
+    "total_amount": "270.00",
+    "payment_terms": null,
+    "line_items": [
+      {
+        "description": "Website hosting (annual)",
+        "quantity": "1",
+        "unit_price": "240.00",
+        "amount": "240.00"
+      },
+      {
+        "description": "Domain renewal",
+        "quantity": "2",
+        "unit_price": "15.00",
+        "amount": "30.00"
+      }
+    ]
+  },
+  "fields": {
+    "invoice_number": {
+      "value": "PF-0931",
+      "status": "extracted",
+      "raw_value": "PF-0931",
+      "evidence": "INVOICE #PF-0931",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "invoice_date": {
+      "value": "2024-06-18",
+      "status": "extracted",
+      "raw_value": "2024-06-18",
+      "evidence": "Issued: 2024-06-18",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "due_date": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_name": {
+      "value": "Pixelforge Studio",
+      "status": "extracted",
+      "raw_value": "Pixelforge Studio",
+      "evidence": "Pixelforge Studio\n88 Harbor Lane, Portland, OR 97201",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_address": {
+      "value": "88 Harbor Lane, Portland, OR 97201",
+      "status": "extracted",
+      "raw_value": "88 Harbor Lane, Portland, OR 97201",
+      "evidence": "88 Harbor Lane, Portland, OR 97201",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_tax_id": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_name": {
+      "value": "Greenleaf Bakery",
+      "status": "extracted",
+      "raw_value": "Greenleaf Bakery",
+      "evidence": "Client: Greenleaf Bakery",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_address": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "purchase_order": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "currency": {
+      "value": "USD",
+      "status": "extracted",
+      "raw_value": "USD",
+      "evidence": "TOTAL USD 270.00",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "subtotal": {
+      "value": 240.0,
+      "status": "inconsistent",
+      "raw_value": "240.00",
+      "evidence": "240.00",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.5,
+      "candidates": [],
+      "issues": [
+        "subtotal (240.00) + tax (0) = 240.00, but total is 270.00"
+      ]
+    },
+    "tax_amount": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "total_amount": {
+      "value": 270.0,
+      "status": "inconsistent",
+      "raw_value": "270.00",
+      "evidence": "TOTAL USD 270.00",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.5,
+      "candidates": [],
+      "issues": [
+        "subtotal (240.00) + tax (0) = 240.00, but total is 270.00"
+      ]
+    },
+    "payment_terms": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    }
+  },
+  "line_items": [
+    {
+      "description": "Website hosting (annual)",
+      "quantity": 1.0,
+      "unit_price": 240.0,
+      "amount": 240.0
+    },
+    {
+      "description": "Domain renewal",
+      "quantity": 2.0,
+      "unit_price": 15.0,
+      "amount": 30.0
+    }
+  ],
+  "missing_fields": [
+    "due_date",
+    "vendor_tax_id",
+    "customer_address",
+    "purchase_order",
+    "tax_amount",
+    "payment_terms"
+  ],
+  "ambiguous_fields": [],
+  "problem_fields": [
+    "subtotal",
+    "total_amount"
+  ],
+  "validation_issues": [
+    "[error] subtotal (240.00) + tax (0) = 240.00, but total is 270.00",
+    "[error] line items sum to 270.00, but subtotal is 240.00"
+  ],
+  "warnings": [],
+  "pages": 1,
+  "text_sources": {
+    "text": 1
+  },
+  "model": "OllamaClient(qwen2.5:7b)",
+  "timings_ms": {
+    "text_extraction": 9.6,
+    "llm_extraction": 70625.9,
+    "validation": 6.0,
+    "total": 70643.5
+  }
+}

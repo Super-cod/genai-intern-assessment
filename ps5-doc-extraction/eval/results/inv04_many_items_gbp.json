@@ -1,0 +1,298 @@
+{
+  "request_id": "c5acd57c734c",
+  "filename": "inv04_many_items_gbp.pdf",
+  "document_type": "invoice",
+  "status": "complete",
+  "needs_review": false,
+  "data": {
+    "invoice_number": "OH-55120",
+    "invoice_date": "2024-08-21",
+    "due_date": "2024-09-20",
+    "vendor_name": "Office Hub Ltd",
+    "vendor_address": "Unit 7, Riverside Park, Leeds LS1 4AP",
+    "vendor_tax_id": "GB 987 6543 21",
+    "customer_name": "Hartley & Sons Accountants",
+    "customer_address": "22 King Street, York YO1 9SP",
+    "purchase_order": null,
+    "currency": "GBP",
+    "subtotal": "902.96",
+    "tax_amount": "180.59",
+    "total_amount": "1083.55",
+    "payment_terms": null,
+    "line_items": [
+      {
+        "description": "A4 copier paper (box)",
+        "quantity": "12",
+        "unit_price": "24.50",
+        "amount": "294.00"
+      },
+      {
+        "description": "Toner cartridge black",
+        "quantity": "3",
+        "unit_price": "62.00",
+        "amount": "186.00"
+      },
+      {
+        "description": "Toner cartridge colour",
+        "quantity": "3",
+        "unit_price": "74.00",
+        "amount": "222.00"
+      },
+      {
+        "description": "Whiteboard markers (pack)",
+        "quantity": "6",
+        "unit_price": "4.25",
+        "amount": "25.50"
+      },
+      {
+        "description": "Lever arch files",
+        "quantity": "20",
+        "unit_price": "2.10",
+        "amount": "42.00"
+      },
+      {
+        "description": "Desk organiser",
+        "quantity": "4",
+        "unit_price": "11.99",
+        "amount": "47.96"
+      },
+      {
+        "description": "Stapler heavy duty",
+        "quantity": "2",
+        "unit_price": "18.75",
+        "amount": "37.50"
+      },
+      {
+        "description": "Laminating pouches (100)",
+        "quantity": "5",
+        "unit_price": "9.60",
+        "amount": "48.00"
+      }
+    ]
+  },
+  "fields": {
+    "invoice_number": {
+      "value": "OH-55120",
+      "status": "extracted",
+      "raw_value": "OH-55120",
+      "evidence": "Invoice Number: OH-55120",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "invoice_date": {
+      "value": "2024-08-21",
+      "status": "extracted",
+      "raw_value": "21 August 2024",
+      "evidence": "Invoice Date: 21 August 2024",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "due_date": {
+      "value": "2024-09-20",
+      "status": "extracted",
+      "raw_value": "20 September 2024",
+      "evidence": "Payment Due: 20 September 2024",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_name": {
+      "value": "Office Hub Ltd",
+      "status": "extracted",
+      "raw_value": "Office Hub Ltd",
+      "evidence": "Office Hub Ltd",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_address": {
+      "value": "Unit 7, Riverside Park, Leeds LS1 4AP",
+      "status": "extracted",
+      "raw_value": "Unit 7, Riverside Park\nLeeds LS1 4AP",
+      "evidence": "Unit 7, Riverside Park\nLeeds LS1 4AP",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.8,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_tax_id": {
+      "value": "GB 987 6543 21",
+      "status": "extracted",
+      "raw_value": "GB 987 6543 21",
+      "evidence": "VAT Reg No: GB 987 6543 21",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_name": {
+      "value": "Hartley & Sons Accountants",
+      "status": "extracted",
+      "raw_value": "Hartley & Sons Accountants",
+      "evidence": "Customer:\nHartley & Sons Accountants",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_address": {
+      "value": "22 King Street, York YO1 9SP",
+      "status": "extracted",
+      "raw_value": "22 King Street\nYork YO1 9SP",
+      "evidence": "22 King Street\nYork YO1 9SP",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "purchase_order": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "currency": {
+      "value": "GBP",
+      "status": "extracted",
+      "raw_value": "£",
+      "evidence": null,
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "subtotal": {
+      "value": 902.96,
+      "status": "extracted",
+      "raw_value": "902.96",
+      "evidence": "Subtotal: £902.96",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "tax_amount": {
+      "value": 180.59,
+      "status": "extracted",
+      "raw_value": "180.59",
+      "evidence": "VAT @ 20%: £180.59",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "total_amount": {
+      "value": 1083.55,
+      "status": "extracted",
+      "raw_value": "1,083.55",
+      "evidence": "Amount Due: £1,083.55",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "payment_terms": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    }
+  },
+  "line_items": [
+    {
+      "description": "A4 copier paper (box)",
+      "quantity": 12.0,
+      "unit_price": 24.5,
+      "amount": 294.0
+    },
+    {
+      "description": "Toner cartridge black",
+      "quantity": 3.0,
+      "unit_price": 62.0,
+      "amount": 186.0
+    },
+    {
+      "description": "Toner cartridge colour",
+      "quantity": 3.0,
+      "unit_price": 74.0,
+      "amount": 222.0
+    },
+    {
+      "description": "Whiteboard markers (pack)",
+      "quantity": 6.0,
+      "unit_price": 4.25,
+      "amount": 25.5
+    },
+    {
+      "description": "Lever arch files",
+      "quantity": 20.0,
+      "unit_price": 2.1,
+      "amount": 42.0
+    },
+    {
+      "description": "Desk organiser",
+      "quantity": 4.0,
+      "unit_price": 11.99,
+      "amount": 47.96
+    },
+    {
+      "description": "Stapler heavy duty",
+      "quantity": 2.0,
+      "unit_price": 18.75,
+      "amount": 37.5
+    },
+    {
+      "description": "Laminating pouches (100)",
+      "quantity": 5.0,
+      "unit_price": 9.6,
+      "amount": 48.0
+    }
+  ],
+  "missing_fields": [
+    "purchase_order",
+    "payment_terms"
+  ],
+  "ambiguous_fields": [],
+  "problem_fields": [],
+  "validation_issues": [],
+  "warnings": [],
+  "pages": 1,
+  "text_sources": {
+    "text": 1
+  },
+  "model": "OllamaClient(qwen2.5:7b)",
+  "timings_ms": {
+    "text_extraction": 23.3,
+    "llm_extraction": 116405.7,
+    "validation": 16.9,
+    "total": 116447.3
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "request_id": "f603f954f95c",
+  "filename": "inv05_ambiguous_date_currency.pdf",
+  "document_type": "invoice",
+  "status": "partial",
+  "needs_review": true,
+  "data": {
+    "invoice_number": "LP-2207",
+    "invoice_date": null,
+    "due_date": null,
+    "vendor_name": "Lumen Photo Co.",
+    "vendor_address": "301 Queen St W, Suite 4",
+    "vendor_tax_id": null,
+    "customer_name": "Maple Events Inc.",
+    "customer_address": null,
+    "purchase_order": null,
+    "currency": null,
+    "subtotal": null,
+    "tax_amount": null,
+    "total_amount": "750.00",
+    "payment_terms": null,
+    "line_items": [
+      {
+        "description": "Event photography (half day)",
+        "quantity": "1",
+        "unit_price": "600.00",
+        "amount": "600.00"
+      },
+      {
+        "description": "Edited photo package",
+        "quantity": "1",
+        "unit_price": "150.00",
+        "amount": "150.00"
+      }
+    ]
+  },
+  "fields": {
+    "invoice_number": {
+      "value": "LP-2207",
+      "status": "extracted",
+      "raw_value": "LP-2207",
+      "evidence": "Invoice: LP-2207",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "invoice_date": {
+      "value": null,
+      "status": "ambiguous",
+      "raw_value": "03/04/2024",
+      "evidence": "Date: 03/04/2024",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.3,
+      "candidates": [
+        "2024-04-03",
+        "2024-03-04"
+      ],
+      "issues": [
+        "'03/04/2024' is ambiguous: day-first 2024-04-03 or month-first 2024-03-04"
+      ]
+    },
+    "due_date": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_name": {
+      "value": "Lumen Photo Co.",
+      "status": "extracted",
+      "raw_value": "Lumen Photo Co.",
+      "evidence": "Lumen Photo Co.",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_address": {
+      "value": "301 Queen St W, Suite 4",
+      "status": "extracted",
+      "raw_value": "301 Queen St W, Suite 4",
+      "evidence": "301 Queen St W, Suite 4",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_tax_id": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_name": {
+      "value": "Maple Events Inc.",
+      "status": "extracted",
+      "raw_value": "Maple Events Inc.",
+      "evidence": "Billed to: Maple Events Inc.",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_address": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "purchase_order": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "currency": {
+      "value": null,
+      "status": "ambiguous",
+      "raw_value": "$",
+      "evidence": "Amount: $600.00",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.3,
+      "candidates": [
+        "USD",
+        "CAD",
+        "AUD",
+        "SGD",
+        "NZD"
+      ],
+      "issues": [
+        "'$' alone does not identify the currency (USD, CAD, AUD, ...)"
+      ]
+    },
+    "subtotal": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "tax_amount": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "total_amount": {
+      "value": 750.0,
+      "status": "extracted",
+      "raw_value": "$750.00",
+      "evidence": "Total: $750.00",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "payment_terms": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    }
+  },
+  "line_items": [
+    {
+      "description": "Event photography (half day)",
+      "quantity": 1.0,
+      "unit_price": 600.0,
+      "amount": 600.0
+    },
+    {
+      "description": "Edited photo package",
+      "quantity": 1.0,
+      "unit_price": 150.0,
+      "amount": 150.0
+    }
+  ],
+  "missing_fields": [
+    "due_date",
+    "vendor_tax_id",
+    "customer_address",
+    "purchase_order",
+    "subtotal",
+    "tax_amount",
+    "payment_terms"
+  ],
+  "ambiguous_fields": [
+    "invoice_date",
+    "currency"
+  ],
+  "problem_fields": [],
+  "validation_issues": [],
+  "warnings": [],
+  "pages": 1,
+  "text_sources": {
+    "text": 1
+  },
+  "model": "OllamaClient(qwen2.5:7b)",
+  "timings_ms": {
+    "text_extraction": 7.4,
+    "llm_extraction": 62870.5,
+    "validation": 16.9,
+    "total": 62895.8
+  }
+}

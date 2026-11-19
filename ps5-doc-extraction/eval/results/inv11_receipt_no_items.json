@@ -1,0 +1,219 @@
+{
+  "request_id": "723a5d754945",
+  "filename": "inv11_receipt_no_items.pdf",
+  "document_type": "invoice",
+  "status": "complete",
+  "needs_review": false,
+  "data": {
+    "invoice_number": "R-20240412-07",
+    "invoice_date": "2024-04-12",
+    "due_date": null,
+    "vendor_name": "CORNER CAFE",
+    "vendor_address": "3 Station Rd, Cambridge CB1 2JW",
+    "vendor_tax_id": null,
+    "customer_name": null,
+    "customer_address": null,
+    "purchase_order": null,
+    "currency": "GBP",
+    "subtotal": null,
+    "tax_amount": "31.07",
+    "total_amount": "186.40",
+    "payment_terms": null,
+    "line_items": [
+      {
+        "description": "Catering for team lunch",
+        "quantity": null,
+        "unit_price": null,
+        "amount": "186.40"
+      }
+    ]
+  },
+  "fields": {
+    "invoice_number": {
+      "value": "R-20240412-07",
+      "status": "extracted",
+      "raw_value": "R-20240412-07",
+      "evidence": "Receipt / Invoice R-20240412-07",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "invoice_date": {
+      "value": "2024-04-12",
+      "status": "extracted",
+      "raw_value": "12 April 2024",
+      "evidence": "12 April 2024 13:42",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "due_date": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_name": {
+      "value": "CORNER CAFE",
+      "status": "extracted",
+      "raw_value": "CORNER CAFE",
+      "evidence": "CORNER CAFE\n3 Station Rd, Cambridge CB1 2JW",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_address": {
+      "value": "3 Station Rd, Cambridge CB1 2JW",
+      "status": "extracted",
+      "raw_value": "3 Station Rd, Cambridge CB1 2JW",
+      "evidence": "3 Station Rd, Cambridge CB1 2JW",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_tax_id": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_name": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_address": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "purchase_order": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "currency": {
+      "value": "GBP",
+      "status": "extracted",
+      "raw_value": "GBP",
+      "evidence": "TOTAL GBP 186.40",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "subtotal": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "tax_amount": {
+      "value": 31.07,
+      "status": "extracted",
+      "raw_value": "31.07",
+      "evidence": "VAT included (20%): GBP 31.07",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "total_amount": {
+      "value": 186.4,
+      "status": "extracted",
+      "raw_value": "186.40",
+      "evidence": "TOTAL GBP 186.40",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "payment_terms": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    }
+  },
+  "line_items": [
+    {
+      "description": "Catering for team lunch",
+      "quantity": null,
+      "unit_price": null,
+      "amount": 186.4
+    }
+  ],
+  "missing_fields": [
+    "due_date",
+    "vendor_tax_id",
+    "customer_name",
+    "customer_address",
+    "purchase_order",
+    "subtotal",
+    "payment_terms"
+  ],
+  "ambiguous_fields": [],
+  "problem_fields": [],
+  "validation_issues": [],
+  "warnings": [],
+  "pages": 1,
+  "text_sources": {
+    "text": 1
+  },
+  "model": "OllamaClient(qwen2.5:7b)",
+  "timings_ms": {
+    "text_extraction": 10.1,
+    "llm_extraction": 58910.3,
+    "validation": 1.0,
+    "total": 58922.6
+  }
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Document Q&amp;A</title>
+<style>
+  :root { --bg:#f7f7f5; --panel:#fff; --ink:#1d1d1f; --muted:#6b6b70; --line:#e3e3e0; --accent:#2f5bd3;
+          --ok:#1f7a4d; --warn:#a15c00; --bad:#b42318; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#141416; --panel:#1d1d20; --ink:#ececee; --muted:#9a9aa0;
+          --line:#2e2e33; --accent:#7c9cff; --ok:#4cc38a; --warn:#f0a840; --bad:#ff6b5f; } }
+  * { box-sizing:border-box } body { margin:0; font:15px/1.5 system-ui,Segoe UI,sans-serif; background:var(--bg); color:var(--ink) }
+  .wrap { max-width:1100px; margin:0 auto; padding:20px 16px; display:grid; grid-template-columns:300px 1fr; gap:16px }
+  @media (max-width:800px) { .wrap { grid-template-columns:1fr } }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px }
+  h1 { font-size:18px; margin:0 0 4px } h2 { font-size:14px; margin:0 0 8px; color:var(--muted); font-weight:600 }
+  button { background:var(--accent); color:#fff; border:0; border-radius:7px; padding:8px 12px; cursor:pointer; font:inherit }
+  button.ghost { background:transparent; color:var(--muted); border:1px solid var(--line) }
+  button:disabled { opacity:.5; cursor:wait }
+  input[type=text] { flex:1; padding:9px 10px; border-radius:7px; border:1px solid var(--line); background:var(--bg); color:var(--ink); font:inherit }
+  .docs { list-style:none; padding:0; margin:10px 0 0; font-size:13px } .docs li { display:flex; justify-content:space-between; gap:6px; padding:5px 0; border-top:1px solid var(--line) }
+  .docs .x { cursor:pointer; color:var(--muted) } .muted { color:var(--muted); font-size:13px }
+  #chat { min-height:360px; max-height:65vh; overflow:auto; display:flex; flex-direction:column; gap:12px; margin-bottom:12px }
+  .q { align-self:flex-end; background:var(--accent); color:#fff; padding:8px 12px; border-radius:10px; max-width:80% }
+  .a { border:1px solid var(--line); border-radius:10px; padding:10px 12px }
+  .badge { display:inline-block; font-size:11px; font-weight:700; padding:1px 7px; border-radius:99px; border:1px solid currentColor; margin-bottom:6px }
+  .answered { color:var(--ok) } .not_found,.insufficient_context { color:var(--warn) } .unsupported { color:var(--bad) }
+  .cites { margin-top:8px; font-size:13px } .cites details { border-top:1px solid var(--line); padding:4px 0 }
+  .conflict { margin-top:6px; font-size:13px; color:var(--warn) } .row { display:flex; gap:8px }
+  pre { white-space:pre-wrap; font-size:12px; color:var(--muted); margin:4px 0 0 }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="panel">
+    <h1>Document Q&amp;A</h1>
+    <p class="muted">Upload PDF / TXT files, then ask questions. Answers are grounded in your documents with citations.</p>
+    <input id="files" type="file" multiple accept=".pdf,.txt">
+    <div class="row" style="margin-top:8px"><button id="up">Upload</button><button class="ghost" id="clear">Clear all</button></div>
+    <div id="upmsg" class="muted" style="margin-top:6px"></div>
+    <ul class="docs" id="docs"></ul>
+  </div>
+  <div class="panel">
+    <div class="row" style="justify-content:space-between;align-items:center">
+      <h2>Conversation</h2>
+      <div class="row"><select id="mode"><option>hybrid</option><option>dense</option><option>bm25</option></select>
+      <button class="ghost" id="newchat">New chat</button></div>
+    </div>
+    <div id="chat"></div>
+    <form id="ask" class="row"><input id="q" type="text" placeholder="Ask about your documents..." autocomplete="off"><button id="send">Ask</button></form>
+  </div>
+</div>
+<script>
+const $ = s => document.querySelector(s);
+let sessionId = null;
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+async function loadDocs() {
+  const docs = await (await fetch('/documents')).json();
+  const ul = $('#docs'); ul.innerHTML = '';
+  if (!docs.length) ul.append(el('li', 'muted', 'No documents yet'));
+  docs.forEach(d => {
+    const li = el('li'); li.append(el('span', null, `${d.doc_name} · ${d.chunks} chunks`));
+    const x = el('span', 'x', '✕'); x.title = 'Remove';
+    x.onclick = async () => { await fetch('/documents/' + d.doc_id, {method:'DELETE'}); loadDocs(); };
+    li.append(x); ul.append(li);
+  });
+}
+$('#up').onclick = async () => {
+  const files = $('#files').files; if (!files.length) return;
+  const fd = new FormData(); [...files].forEach(f => fd.append('files', f));
+  $('#up').disabled = true; $('#upmsg').textContent = 'Indexing…';
+  try {
+    const r = await (await fetch('/documents', {method:'POST', body:fd})).json();
+    $('#upmsg').textContent = (r.results || []).map(x => x.ok ? `✓ ${x.filename} (${x.chunks} chunks)${x.warnings.length ? ' – ' + x.warnings.join('; ') : ''}` : `✗ ${x.filename}: ${x.message}`).join('\n') || JSON.stringify(r);
+  } catch (e) { $('#upmsg').textContent = 'Upload failed: ' + e; }
+  $('#up').disabled = false; $('#files').value = ''; loadDocs();
+};
+$('#clear').onclick = async () => { await fetch('/documents', {method:'DELETE'}); loadDocs(); };
+$('#newchat').onclick = () => { if (sessionId) fetch('/sessions/' + sessionId, {method:'DELETE'}); sessionId = null; $('#chat').innerHTML = ''; };
+
+$('#ask').onsubmit = async e => {
+  e.preventDefault(); const q = $('#q').value.trim(); if (!q) return;
+  $('#chat').append(el('div', 'q', q)); $('#q').value = ''; $('#send').disabled = true;
+  const box = el('div', 'a', 'Thinking…'); $('#chat').append(box); box.scrollIntoView();
+  try {
+    const res = await fetch('/query', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({question:q, session_id:sessionId, mode:$('#mode').value})});
+    const r = await res.json(); box.textContent = '';
+    if (!res.ok) { box.append(el('span', 'badge unsupported', r.error || 'error'), el('div', null, r.message || JSON.stringify(r))); }
+    else {
+      sessionId = r.session_id;
+      box.append(el('span', 'badge ' + r.status, r.status.replace('_', ' ')), el('div', null, r.answer));
+      if (r.conflict_note) box.append(el('div', 'conflict', '⚠ Conflict: ' + r.conflict_note));
+      if (r.citations.length) {
+        const c = el('div', 'cites');
+        r.citations.forEach(ct => { const d = el('details'); d.append(el('summary', null, `[${ct.label}] ${ct.doc_name}${ct.page ? ' p.' + ct.page : ''}${ct.section ? ' – ' + ct.section : ''}`), el('pre', null, ct.snippet)); c.append(d); });
+        box.append(c);
+      }
+      const meta = el('div', 'muted', `query used: “${r.standalone_question}” · ${Math.round(r.timings_ms.total)} ms` + (r.grounding_score != null ? ` · grounding ${r.grounding_score}` : ''));
+      meta.style.marginTop = '6px'; box.append(meta);
+    }
+  } catch (err) { box.textContent = 'Request failed: ' + err; }
+  $('#send').disabled = false; box.scrollIntoView();
+};
+loadDocs();
+</script>
+</body>
+</html>

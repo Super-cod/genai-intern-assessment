@@ -1,0 +1,17 @@
+RX-200 Customer Support FAQ
+Last updated: August 20, 2024
+
+What are your support hours?
+Our support team is available Monday to Friday, 08:00 to 20:00 CET, by phone and through the customer portal. Critical incidents (robot fleet down) are handled 24/7 for customers with a Premium support plan.
+
+What warranty does the RX-200 have?
+The RX-200 is covered by a limited warranty of 2 years from the date of delivery. The warranty covers manufacturing defects in the drive system, lift mechanism and controller board. Batteries are covered for 12 months. Damage caused by operating the robot outside its rated payload or on wet floors is not covered.
+
+Can I return an RX-200?
+Robots can be returned within 30 days of delivery if they are unused and in the original packaging. A 15 percent restocking fee applies.
+
+How do I update the robot software?
+Software updates are delivered over the air through the fleet manager. Updates are installed when the robot is docked and idle. You can schedule a maintenance window in fleet manager settings.
+
+How many robots can one fleet manager control?
+A single fleet manager instance supports up to 50 RX-200 robots. Larger deployments use multiple fleet manager instances with a shared map.

@@ -1,0 +1,491 @@
+{
+  "request_id": "854d7f5bd0f6",
+  "filename": "inv10_multi_page.pdf",
+  "document_type": "invoice",
+  "status": "complete",
+  "needs_review": false,
+  "data": {
+    "invoice_number": "APX-8890",
+    "invoice_date": "2024-11-30",
+    "due_date": "2024-12-30",
+    "vendor_name": "Apex Strategy Partners",
+    "vendor_address": "1200 Pine Street, Seattle, WA 98101",
+    "vendor_tax_id": null,
+    "customer_name": "Cascade Outdoor Gear Inc.",
+    "customer_address": "77 Lake Ave, Tacoma, WA 98402",
+    "purchase_order": null,
+    "currency": "USD",
+    "subtotal": "8640.00",
+    "tax_amount": "864.00",
+    "total_amount": "9504.00",
+    "payment_terms": null,
+    "line_items": [
+      {
+        "description": "Consulting session 1 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 2 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 3 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 4 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 5 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 6 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 7 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 8 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 9 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 10 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 11 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 12 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 13 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 14 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 15 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 16 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 17 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 18 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 19 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 20 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 21 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 22 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 23 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Consulting session 24 (hours)",
+        "quantity": "3",
+        "unit_price": "120.00",
+        "amount": "360.00"
+      }
+    ]
+  },
+  "fields": {
+    "invoice_number": {
+      "value": "APX-8890",
+      "status": "extracted",
+      "raw_value": "APX-8890",
+      "evidence": "INVOICE APX-8890",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "invoice_date": {
+      "value": "2024-11-30",
+      "status": "extracted",
+      "raw_value": "November 30, 2024",
+      "evidence": "Date: November 30, 2024",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "due_date": {
+      "value": "2024-12-30",
+      "status": "extracted",
+      "raw_value": "December 30, 2024",
+      "evidence": "Due: December 30, 2024",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_name": {
+      "value": "Apex Strategy Partners",
+      "status": "extracted",
+      "raw_value": "Apex Strategy Partners",
+      "evidence": "Apex Strategy Partners",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_address": {
+      "value": "1200 Pine Street, Seattle, WA 98101",
+      "status": "extracted",
+      "raw_value": "1200 Pine Street, Seattle, WA 98101",
+      "evidence": "1200 Pine Street, Seattle, WA 98101",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_tax_id": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_name": {
+      "value": "Cascade Outdoor Gear Inc.",
+      "status": "extracted",
+      "raw_value": "Cascade Outdoor Gear Inc.",
+      "evidence": "Bill to: Cascade Outdoor Gear Inc.",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_address": {
+      "value": "77 Lake Ave, Tacoma, WA 98402",
+      "status": "extracted",
+      "raw_value": "77 Lake Ave, Tacoma, WA 98402",
+      "evidence": "77 Lake Ave, Tacoma, WA 98402",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "purchase_order": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    },
+    "currency": {
+      "value": "USD",
+      "status": "extracted",
+      "raw_value": "$",
+      "evidence": "Total due (USD): $9,504.00",
+      "page": 2,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "subtotal": {
+      "value": 8640.0,
+      "status": "extracted",
+      "raw_value": "$8,640.00",
+      "evidence": "Subtotal: $8,640.00",
+      "page": 2,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "tax_amount": {
+      "value": 864.0,
+      "status": "extracted",
+      "raw_value": "$864.00",
+      "evidence": "Tax (10%): $864.00",
+      "page": 2,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "total_amount": {
+      "value": 9504.0,
+      "status": "extracted",
+      "raw_value": "$9,504.00",
+      "evidence": "Total due (USD): $9,504.00",
+      "page": 2,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "payment_terms": {
+      "value": null,
+      "status": "not_found",
+      "raw_value": null,
+      "evidence": null,
+      "page": null,
+      "source": null,
+      "confidence": 0.0,
+      "candidates": [],
+      "issues": []
+    }
+  },
+  "line_items": [
+    {
+      "description": "Consulting session 1 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 2 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 3 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 4 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 5 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 6 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 7 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 8 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 9 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 10 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 11 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 12 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 13 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 14 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 15 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 16 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 17 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 18 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 19 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 20 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 21 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 22 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 23 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    },
+    {
+      "description": "Consulting session 24 (hours)",
+      "quantity": 3.0,
+      "unit_price": 120.0,
+      "amount": 360.0
+    }
+  ],
+  "missing_fields": [
+    "vendor_tax_id",
+    "purchase_order",
+    "payment_terms"
+  ],
+  "ambiguous_fields": [],
+  "problem_fields": [],
+  "validation_issues": [],
+  "warnings": [],
+  "pages": 2,
+  "text_sources": {
+    "text": 2
+  },
+  "model": "OllamaClient(qwen2.5:7b)",
+  "timings_ms": {
+    "text_extraction": 36.6,
+    "llm_extraction": 234396.2,
+    "validation": 3.6,
+    "total": 234437.6
+  }
+}

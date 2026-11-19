@@ -1,0 +1,235 @@
+{
+  "request_id": "082d31c7aa5c",
+  "filename": "inv01_classic_usd.pdf",
+  "document_type": "invoice",
+  "status": "complete",
+  "needs_review": false,
+  "data": {
+    "invoice_number": "INV-2024-0012",
+    "invoice_date": "2024-03-05",
+    "due_date": "2024-04-04",
+    "vendor_name": "Brightline Supplies LLC",
+    "vendor_address": "450 Market Street, Denver, CO 80202",
+    "vendor_tax_id": "84-1234567",
+    "customer_name": "Northfield Clinic",
+    "customer_address": "12 Elm Road, Boulder, CO 80301",
+    "purchase_order": "PO-7781",
+    "currency": "USD",
+    "subtotal": "1250.00",
+    "tax_amount": "100.00",
+    "total_amount": "1350.00",
+    "payment_terms": "Net 30",
+    "line_items": [
+      {
+        "description": "Ergonomic office chair",
+        "quantity": "5",
+        "unit_price": "180.00",
+        "amount": "900.00"
+      },
+      {
+        "description": "Standing desk frame",
+        "quantity": "2",
+        "unit_price": "150.00",
+        "amount": "300.00"
+      },
+      {
+        "description": "Cable management kit",
+        "quantity": "10",
+        "unit_price": "5.00",
+        "amount": "50.00"
+      }
+    ]
+  },
+  "fields": {
+    "invoice_number": {
+      "value": "INV-2024-0012",
+      "status": "extracted",
+      "raw_value": "INV-2024-0012",
+      "evidence": "Invoice No: INV-2024-0012",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "invoice_date": {
+      "value": "2024-03-05",
+      "status": "extracted",
+      "raw_value": "March 5, 2024",
+      "evidence": "Invoice Date: March 5, 2024",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "due_date": {
+      "value": "2024-04-04",
+      "status": "extracted",
+      "raw_value": "April 4, 2024",
+      "evidence": "Due Date: April 4, 2024",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_name": {
+      "value": "Brightline Supplies LLC",
+      "status": "extracted",
+      "raw_value": "Brightline Supplies LLC",
+      "evidence": "Brightline Supplies LLC",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_address": {
+      "value": "450 Market Street, Denver, CO 80202",
+      "status": "extracted",
+      "raw_value": "450 Market Street\nDenver, CO 80202",
+      "evidence": "450 Market Street\nDenver, CO 80202",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.8,
+      "candidates": [],
+      "issues": []
+    },
+    "vendor_tax_id": {
+      "value": "84-1234567",
+      "status": "extracted",
+      "raw_value": "84-1234567",
+      "evidence": "EIN: 84-1234567",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_name": {
+      "value": "Northfield Clinic",
+      "status": "extracted",
+      "raw_value": "Northfield Clinic",
+      "evidence": "Bill To:\nNorthfield Clinic",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "customer_address": {
+      "value": "12 Elm Road, Boulder, CO 80301",
+      "status": "extracted",
+      "raw_value": "12 Elm Road\nBoulder, CO 80301",
+      "evidence": "12 Elm Road\nBoulder, CO 80301",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "purchase_order": {
+      "value": "PO-7781",
+      "status": "extracted",
+      "raw_value": "PO-7781",
+      "evidence": "PO Number: PO-7781",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "currency": {
+      "value": "USD",
+      "status": "extracted",
+      "raw_value": "USD",
+      "evidence": "Subtotal: USD 1,250.00",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "subtotal": {
+      "value": 1250.0,
+      "status": "extracted",
+      "raw_value": "1,250.00",
+      "evidence": "Subtotal: USD 1,250.00",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "tax_amount": {
+      "value": 100.0,
+      "status": "extracted",
+      "raw_value": "100.00",
+      "evidence": "Sales Tax (8%): USD 100.00",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "total_amount": {
+      "value": 1350.0,
+      "status": "extracted",
+      "raw_value": "1,350.00",
+      "evidence": "Total Due: USD 1,350.00",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    },
+    "payment_terms": {
+      "value": "Net 30",
+      "status": "extracted",
+      "raw_value": "Net 30",
+      "evidence": "Payment Terms: Net 30.",
+      "page": 1,
+      "source": "text",
+      "confidence": 0.95,
+      "candidates": [],
+      "issues": []
+    }
+  },
+  "line_items": [
+    {
+      "description": "Ergonomic office chair",
+      "quantity": 5.0,
+      "unit_price": 180.0,
+      "amount": 900.0
+    },
+    {
+      "description": "Standing desk frame",
+      "quantity": 2.0,
+      "unit_price": 150.0,
+      "amount": 300.0
+    },
+    {
+      "description": "Cable management kit",
+      "quantity": 10.0,
+      "unit_price": 5.0,
+      "amount": 50.0
+    }
+  ],
+  "missing_fields": [],
+  "ambiguous_fields": [],
+  "problem_fields": [],
+  "validation_issues": [],
+  "warnings": [],
+  "pages": 1,
+  "text_sources": {
+    "text": 1
+  },
+  "model": "OllamaClient(qwen2.5:7b)",
+  "timings_ms": {
+    "text_extraction": 7.3,
+    "llm_extraction": 91999.3,
+    "validation": 35.3,
+    "total": 92042.9
+  }
+}
